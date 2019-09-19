@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'day01';
+  city = 'New Delhi';
+  year = 2019;
+  numbers  = [1, 2, 3, 4, 5];
+  favouriteActor = {
+    name: 'Amitabh Bachhan',
+    city: 'Mumbai'
+  };
 }

@@ -1,0 +1,42 @@
+<div>
+  <h3>My Demo Component</h3>
+  <div>
+    <label>
+      Enter your message
+      <input type="text" [(ngModel)]="message">
+    </label>
+    <br>
+    Your message is {{ message }}
+  </div>
+  <div>
+    <button (click)="btnClicked($event)">Click Me!!</button>
+  </div>
+  <div>
+    <button (click)="toggleList()">Toggle List</button>
+  </div>
+  <div *ngIf="listFlag">
+    <h5>List of Veggies</h5>
+    <ul>
+      <li *ngFor="let veggie of vegetables; index as n">
+        Index: {{ n+1 }}
+        Name: {{ veggie.name }}
+        Price: {{ veggie.price }}
+        <button (click)="deleteVeg(n)">X</button>
+      </li>
+    </ul>
+
+    <div>
+      <label>
+        Name: <input type="text" [(ngModel)]="newName">
+      </label>
+      <br><br>
+      <label>
+        Price: <input type="text" [(ngModel)]="newPrice">
+      </label>
+      <br><br>
+      <button (click)="addVeg()">Add</button>
+    </div>
+
+  </div>
+  <app-book [title]="'Angels and Demons'" [author]="'Dan Brown'"></app-book>
+</div>
